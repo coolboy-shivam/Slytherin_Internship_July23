@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding: 5px;
+        }
+        table{
+            background-color:aqua;
+            border: 3px solid mediumblue;
+        }
+        table:hover{
+            box-shadow: -5px -5px 15px rgba(0,255,0,0.5),
+                         5px  5px 15px rgba(0,255,0,0.5),
+                  inset -5px -5px 15px rgba(0,255,0,0.5),
+                  inset  5px  5px 15px rgba(0,255,0,0.5);
+        }
+        body{
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            min-height: 100vh;
+            background-color: aquamarine;
+        }
+        input{
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        input[type="submit"]{
+            background-color: greenyellow;
+            padding: 7px;
+            border-radius: 6px;
+            width: 25%;
+        }
+        input[type="submit"]:hover{
+            background-color: #00ff00;
+            box-shadow: -5px -5px 15px rgba(0,255,0,0.5),
+                         5px  5px 15px rgba(0,255,0,0.5),
+                  inset -5px -5px 15px rgba(0,255,0,0.5),
+                  inset  5px  5px 15px rgba(0,255,0,0.5);
+        }
+    </style>
+</head>
+<body>
+        <form action="register.php" method="post">
+            <table>
+                <tr align="center">
+                    <td colspan="2">Registration Form</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Enter Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Enter Mobile Number: </label>
+                    </td>
+                    <td>
+                        <input type="tel" name="phone" id="phone" pattern="[6789][0-9]{9}" required> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mail">Enter Email: </label>
+                    </td>
+                    <td>
+                        <input type="email" name="mail" id="mail" required> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Enter New Password: </label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password" required> <br>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <input type="submit" value="Submit"> 
+                    </td>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>
